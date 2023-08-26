@@ -26,7 +26,7 @@ app.get('/contactme', (req, res) => {
 // //404 error display if something goes wrong
 // app.get('/error', function)
 app.use((req, res) => {
-    res.status(404)
+    res.status(404) // if status = 404 it returns 404 error html
     res.sendFile(__dirname + "/404.html");
 })
 app.listen(port, () => console.log(`listening at http://localhost:${port}`));
